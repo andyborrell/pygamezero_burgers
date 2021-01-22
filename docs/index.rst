@@ -6,9 +6,10 @@
 Pygame Zero : Burgers Game
 ===========================================
 
+https://tinyurl.com/pgzburgers
+
 .. image:: images/burgers_complete.png
 
-https://tinyurl.com/pgzburgers
 
 In this tutorial we'll make a game about catching falling ingredients and building burgers!
 

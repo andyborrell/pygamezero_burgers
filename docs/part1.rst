@@ -31,12 +31,12 @@ Add these lines to the end of your file:
 
 .. image:: images/play_icon.png
 
-There's the play icon again.  Hit **play** and you should now see the Burgers background.  If this worked you can jump ahead to :ref:`Adding Ingredients`.   If you got an error read on for tips on fixing it:
+There's the play icon again.  Hit **play** and you should now see the Burgers background.  If this worked you can jump ahead to Ingredients List.   If you got an error read on for tips on fixing it:
 
 Errors (Skip if you don't have an error)
 ----------------------------------------
 
-The first thing to check is that you downloaded the required images for this project.  See the :ref:`Getting Started` section for details on this.  You can check your images are in the right place by clicking on the **Images** button in Mu.  This will open the images folder, you should have put the burgers folder inside this folder.
+The first thing to check is that you downloaded the required images for this project.  See the Getting Started section for details on this.  You can check your images are in the right place by clicking on the **Images** button in Mu.  This will open the images folder, you should have put the burgers folder inside this folder.
 
 The second problem you might have is if you saved your code file in a custom location.  Unfortunately Mu only likes code files that are saved in its mu_code directory.  This is the directory that is one level above the images directory that opens up when you click **Images**.
 
@@ -103,7 +103,7 @@ The next function we just added is the :code:`spawn_item` function.  This is the
 
     new_item = Actor("burgers/bun_top", (500, 100))
 
-This line creates a new :code:`Actor`, just like we did in flappy bird.  We use a variable called :code:`new_item` to hold it.
+This line creates a new :code:`Actor`, just like we did in Flappy Bird.  We use a variable called :code:`new_item` to hold it.
 
 .. code-block:: python
     :emphasize-lines: 1
@@ -139,13 +139,13 @@ To give us something to see we need to add these highlighted lines to the draw f
         for item in game.items:
             item.draw()
 
-The **for** keyword is a way to make a loop.  In this loop were going take every :code:`item` in our **game.items** variable and then draw the :code:`item`.
+The **for** keyword is a way to make a loop.  In this loop were going take every :code:`item` in our :code:`game.items` variable and then draw the :code:`item`.
 
 .. image:: images/play_icon.png
 
-Now you should see that after one second part of a burger appears on the screen!
+Now you should see that after one second a part of a burger appears on the screen!
 
-Let's add an update function to make this burger top fall down the screen:
+Let's add an update function to make this sprite fall down the screen:
 
 .. code-block:: python
 
@@ -238,7 +238,7 @@ Next let's create a list of image filenames so that we can pick at random which 
 
 Remember the [] from before?   Well here they are again, but this time there are 5 items in the list, each one is the file path to an image we want to use.
 
-Next, change our :code:`spawn_item` function so picks one of the random images (you need to change the highlighted lines):
+Next, change our :code:`spawn_item` function so it picks one of the random images (you need to change the highlighted lines):
 
 
 .. code-block:: python
@@ -259,11 +259,11 @@ Now when we create the Actor we're using an image from our :code:`item_images` l
 |                                                                                                                                                                                |    
 |:code:`print(my_list[1])`                                                                                                                                                       |
 |                                                                                                                                                                                |
-|On the first line they create a new list, and on the second line they're used to get item number one in the list.   Item zero is the Dog!  Lists start at zero in python.       |
+|On the first line they create a new list, and on the second line they're used to get item number one in the list.   Item one is Dog!  Lists start at zero in python.            |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-We use :code:`random.randint` to randomly choose a number between 0 (the first image in the list), and :code:`NUM_ITEM_TYPES-1`,  the last item in the list.
+We use :code:`random.randint` to randomly choose a number between :code:`0` (the first image in the list), and :code:`NUM_ITEM_TYPES-1`,  the last item in the list.
 
 - Can you figure out why we do :code:`NUM_ITEM_TYPES - 1` instead of just :code:`NUM_ITEM_TYPES`?
 
@@ -282,13 +282,16 @@ Finally let's spread them out randomly from left to right.  Change this highligh
         game.items.append(new_item)
         clock.schedule(spawn_item, SPAWN_ITEM_INTERVAL)
 
-Now we're using :code:`random.randint` again to pick a random starting x value for each item.
+Now we're using :code:`random.randint` again to pick a random starting x value for each item.  The second parameter to the Actor function is an (x,y) pair of numbers.  We're using our new call to :code:`random.randint` for the x value, and :code:`100` for the y value.
 
 .. image:: images/play_icon.png
 
 You should now game that looks something like this:
 
 .. image:: images/screenshot_falling_items.png
+
+Served Up Next
+--------------
 
 In the next part we'll add a plate so we can catch the pieces and build some tasty burgers!
 
