@@ -11,7 +11,7 @@ To start our project let's start a new file and enter the following lines:
 
     TITLE = "Burgers"
     WIDTH = 1000
-    HEIGHT = 1000
+    HEIGHT = 700
 
 When it's a good time to test your code you will see this icon:
 
@@ -184,7 +184,7 @@ Add these highlighted lines to the top of your file:
 
     TITLE = "Burgers"
     WIDTH = 1000
-    HEIGHT = 1000
+    HEIGHT = 700
 
     SPAWN_ITEM_INTERVAL = 0.5
     ITEM_X_MIN = 250
