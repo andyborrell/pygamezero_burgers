@@ -2,9 +2,8 @@
 
 Part 1
 ======
-
-Getting Started
----------------
+Creating a Window
+-----------------
 To start our project let's start a new file and enter the following lines:
 
 .. code-block:: python
@@ -36,12 +35,12 @@ There's the play icon again.  Hit **play** and you should now see the Burgers ba
 Errors (Skip if you don't have an error)
 ----------------------------------------
 
-The first thing to check is that you downloaded the required images for this project.  See the Getting Started section for details on this.  You can check your images are in the right place by clicking on the **Images** button in Mu.  This will open the images folder, you should have put the burgers folder inside this folder.
+The first thing to check is that you downloaded the required images for this project.  See :ref:`installing-burger-images` for details on this.  You can check your images are in the right place by clicking on the **Images** button in Mu.  This will open the images folder, you should have put the burgers folder inside this folder.
 
 The second problem you might have is if you saved your code file in a custom location.  Unfortunately Mu only likes code files that are saved in its mu_code directory.  This is the directory that is one level above the images directory that opens up when you click **Images**.
 
-
-    
+ 
+     
 
 Ingredients List
 ----------------
@@ -50,7 +49,7 @@ In this project we're going to create our own **class** called GameData.  We've 
 A class is kind of like a blueprint for an object.  Each class makes its own type of object.  The Actor class makes objects that we can draw and move around on the screen, like a Sprite in Scratch.  
 
 Type the following at the end of your code to create a new class called :code:`GameData`.
-
+  
 
 .. code-block:: python
 
