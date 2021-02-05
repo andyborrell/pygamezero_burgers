@@ -10,7 +10,7 @@ To start our project let's start a new file and enter the following lines:
 
     TITLE = "Burgers"
     WIDTH = 1000
-    HEIGHT = 700
+    HEIGHT = 714
 
 When it's a good time to test your code you will see this icon:
 
@@ -149,7 +149,7 @@ Let's add an update function to make this sprite fall down the screen:
 .. code-block:: python
 
     def update():
-        for item in game.items:
+        for item in list(game.items):
             item.y += 5
 
 We're using **for** again to loop over all the items in our list.  There's only one item in the list so far, but we can change that now. Add this line to end of your :code:`spawn_item` function:
@@ -183,7 +183,7 @@ Add these highlighted lines to the top of your file:
 
     TITLE = "Burgers"
     WIDTH = 1000
-    HEIGHT = 700
+    HEIGHT = 714
 
     SPAWN_ITEM_INTERVAL = 0.5
     ITEM_X_MIN = 250
@@ -195,20 +195,20 @@ Can you guess why what these lines are for?
 First let's change our :code:`start_game` and :code:`spawn_item` functions to use the new :code:`SPAWN_ITEM_INTERVAL` variable.  We can also change the :code:`update` function to use :code:`FALL_SPEED`. The highlighted lines are the lines you need to change:
 
 .. code-block:: python
-    :emphasize-lines: 3,8,12
+    :emphasize-lines: 3,7,12
 
     def start_game():
         game.items = []
         clock.schedule(spawn_item, SPAWN_ITEM_INTERVAL)
 
+    def update():
+        for item in list(game.items):
+            item.y += FALL_SPEED
+
     def spawn_item():
         new_item = Actor("burgers/bun_top", (500, 100))
         game.items.append(new_item)
         clock.schedule(spawn_item, SPAWN_ITEM_INTERVAL)
-
-    def update():
-        for item in game.items:
-            item.y += FALL_SPEED
 
 This means we have one convenient place at the top of the file to tweak the game.
 
