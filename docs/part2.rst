@@ -150,7 +150,7 @@ This is similar to code we've seen in Flappy Bird.  The first two **if** stateme
 
 
 Catching Items
-==========================================================================
+------------------------
 
 You should now be able to move your plate left and right.  Now let's make it so that we can catch some ingredients.  The changes you need are in the highlighted lines below.  You're adding more code to the item loop in the update function.  Before, this loop was moving every item down the screen. Now it's also going to do a couple of checks on the position of the item.  
 
