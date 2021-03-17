@@ -412,7 +412,7 @@ Now on to problem 2, the spacing between the ingredients in wrong.  You can see 
        item.x = game.plate.x
        game.stack_height += 10
 
-The problem is that not all the ingredients have a thickness of 10 pixels.  Some are thick like the meat, and some are thin like the tomato.  We need to work out how thick each ingredient is and use that thickness.  To save you the trouble I've measured the thickneses.  Add the following highlighted line near the top of your file to create a list representing the thickness of each ingredient:
+The problem is that not all the ingredients have a thickness of 10 pixels.  Some are thick like the meat, and some are thin like the tomato.  We need to work out how thick each ingredient is and use that thickness.  To save you the trouble I've measured the thicknesses.  Add the following highlighted line near the top of your file to create a list representing the thickness of each ingredient:
 
 
 .. code-block:: python
