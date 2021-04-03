@@ -56,3 +56,5 @@ html_static_path = ['_static']
 html_css_files = [
     'css/custom.css',
 ]
+html_theme_options = {'body_min_width': '800'}
+
